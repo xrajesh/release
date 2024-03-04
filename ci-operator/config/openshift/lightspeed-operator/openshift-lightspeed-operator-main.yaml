@@ -21,6 +21,8 @@ operator:
   - as: lightspeed-operator-bundle
     dockerfile_path: bundle.Dockerfile
   substitutions:
+  - pullspec: quay.io/openshift/lightspeed-operator:latest
+    with: pipeline:lightspeed-operator
   - pullspec: quay.io/openshift/lightspeed-service-api:latest
     with: pipeline:lightspeed-service-api
 promotion:
